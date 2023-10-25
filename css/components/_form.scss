@@ -1,0 +1,98 @@
+@use "./../abstracts/variables" as var;
+@use "./../abstracts/mixins" as mix;
+@use "sass:math";
+
+#main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: var.$font-size-medium;
+  font-weight: var.$font-weight-bold;
+
+  .container {
+    @extend %wrap;
+
+    background-color: var.$background-color-primary;
+    max-width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var.$text-color-secondary;
+    border: 0.2rem solid var.$background-color-secondary;
+    border-radius: var.$border-radius;
+    padding: math.div(var.$gutter-base, 3);
+  
+
+    @media (max-width: 425px) {
+      margin-top: var.$gutter-base;
+      max-width: 80%;
+      min-height: 60vh;
+    }
+
+    :not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+
+    form {
+      width: 100%;
+
+      .submit-btn {
+        text-align: center;
+
+        #submit {
+          background-color: var.$background-color-quaternary;
+          color: var.$text-color-primary;
+          border: 2px solid var.$text-color-primary;
+          border-radius: var.$border-radius;
+          cursor: pointer;
+          padding: math.div(var.$gutter-base, 4) var.$gutter-base;
+          font-weight: var.$font-weight-bold;
+
+          &:hover {
+            transform: scale(1.05);
+            transition: 0.3s;
+          }
+        }
+      }
+
+      label {
+        @media (max-width: 425px) {
+          font-size: var.$font-size-base;
+        }
+      }
+
+      input {
+        background-color: var.$background-color-base;
+        border: 0.2rem solid var.$background-color-primary;
+        border-radius: var.$border-radius;
+        padding: math.div(var.$gutter-base, 2.5);
+        border: 1px solid var.$text-color-primary;
+        width: 60%;
+
+        @media (max-width: 425px) {
+          width: 80%;
+          margin-top: math.div(var.$gutter-base, 3);
+        }
+
+        &:hover {
+          transform: scale(1.04);
+          transition: 0.5s;
+          cursor: pointer;
+        }
+
+        &:focus {
+          border-color: var.$background-color-tertiary;
+          border-width: 2px;
+          outline: none;
+        }
+      }
+    }
+
+    .userName {
+      font-size: var.$font-size-base;
+      color: var.$background-color-quaternary;
+    }
+  }
+}

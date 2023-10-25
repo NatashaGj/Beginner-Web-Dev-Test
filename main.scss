@@ -1,0 +1,19 @@
+@use "./css/components/menu";
+@use "./css/abstracts/variables" as var;
+@use "./css/components/footer";
+@use "./css/components/form";
+@use "./css/components/switch";
+
+body {
+  background-color: var.$background-color-base;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+.dark {
+  background-color: var.$background-color-tertiary;
+}
+
+a {
+  text-decoration: none;
+}

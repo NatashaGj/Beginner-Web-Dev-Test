@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Software Development Test - NatashaGjDuridanska</title>
+    <script
+      src="https://kit.fontawesome.com/5f92f7534d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./main.css" />
+    <script src="./main.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <a href="#" class="logo">
+          <img
+            src="./img/instagram-white-icon.webp"
+            alt="logo"
+            class="logo-img"
+        /></a>
+        <ul>
+          <li>
+            <a href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <section id="main-content">
+      <div class="container">
+        <form id="form">
+          <div class="name">
+            <label for="name">Name</label>
+            <br />
+            <input type="text" id="name" name="name" required />
+            <span class="error" id="nameError"></span>
+          </div>
+          <div class="email">
+            <label for="email">Email</label>
+            <br />
+            <input type="email" id="email" name="email" required />
+            <span class="error" id="emailError"></span>
+          </div>
+          <div class="password">
+            <label for="password">Password</label>
+            <br />
+            <input
+              type="password"
+              id="password"
+              name="password"
+              minlength="6"
+              required
+            />
+            <span class="error" id="passwordError"></span>
+          </div>
+          <div class="submit-btn">
+            <button type="submit" id="submit">Submit</button>
+          </div>
+        </form>
+        <div class="userList">
+          <span class="userName"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- switch theme btn -->
+    <div class="btn-switch">
+      <label class="switch" for="checkbox">
+        <input type="checkbox" id="checkbox" />
+        <span class="slider round"></span>
+      </label>
+    </div>
+    <!--  -->
+    <footer>
+      <div class="inner">
+        <p>Natasha Gjorgjievska Duridanska<br />2023</p>
+      </div>
+    </footer>
+  </body>
+</html>
